@@ -1,0 +1,11 @@
+- Eigendecomposition
+    - It reveals characteristics of the matrix:
+        - Is singular if and only if any of its eigenvalues are zero.
+        - Under specific confitions, can optimize quadratic expressions:
+            - Maximum of f(x) = largest eigenvalue.
+            - Minimum of f(x) = smallest eigenvalue.
+
+    - It's not possible with all matrices, and in some cases it involves complex
+    numbers instead of real ones.
+    - In ML, we typically work with real symmetric matrices, which are efficient to
+    decompose into real-only eigenvectors and real-only eigenv alues.

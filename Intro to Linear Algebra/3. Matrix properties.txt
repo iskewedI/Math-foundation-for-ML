@@ -1,0 +1,51 @@
+- The Fronebius Norm
+    - To quantify the size of a matrix. Measured in terms of Euclidian distance.
+        - The sum of the magnitude of all the vectors in X.
+    - Annotated by ||X||f (small f)
+    - Analogous to the L2 norm
+
+- Matrix multiplication
+    - The number of columns in the first matrix MUST match the number of rows in the second one.
+    - We end up with a matrix with the same number of rows of the first matrix, and the same number of columns
+    of the second one.
+
+    - Procedure
+        - We first multiply the first matrix row with the second matrix column values (element-wise)
+        - Then we sum up the rows of result of the multiplications
+
+    - Techincal info:
+        - Numpy => np.dot() performs the matrix multiplication, even though technically dot products are between
+        vectors only.
+
+- Matrix inversion
+    - Convenient approach for solving linear equations.
+        - Alternative to manually solving with substitution or elimination.
+    - Denoted as _*X*_(-1)  -> Elevated to  -1
+        - Satisfies: _*X*_(-1) * X = I(n)
+            - That means, if we multiply the matrix by its inverted matrix, we get an Identity matrix
+
+    - The "regression formula" is:
+        - y = Xw (w being vector of weights)
+    - Assumming X(-1) exists, matrix inversion can solve for w:
+        - Xw = y
+        - X(-1)Xw = X(-1)y
+        # Identity matrix = X(-1)X
+        - I(n)w = X(-1)y
+        # Identity dot another matrix results in the same matrix
+        # The weights would be the inverted matrix dot the 'y' matrix (labels)
+        w = X(-1)y
+
+- Diagonal Matrices
+    - Has 0s in every places instead of the elements inside the main diagonal. There,
+    it has 1s.
+    - Squared ones are computationally efficient for:
+        - Multiplication
+        - Inversion
+    - If non-square, it can be efficient if:
+        - h > w => adding zeros to product (h: height, w:width)
+        - w > h => removing elements from product
+
+- Orthogonal Matrices
+    - Where orthonormal vectors:
+        - Make up all rows
+        - Make up all columns

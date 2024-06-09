@@ -1,0 +1,44 @@
+- Singular Value Decomposition (SVD)
+    - Applicable for non-square matrices (any real-valued matrix)
+    - Application e.g.: Reduce image size.
+    - It decomposes matrix into:
+        - Singular vectors (analogous to eigenvectors).
+        - Singular values (analogous to eigenvalues).
+    - For a matrix A, its SVD is A = UDV(T)
+        - U = Its columns are LEFT-singular the vectors of A.
+        - D = Its diagonal elements are singular the values of A.
+        - V = Its columns are the RIGHT-singular the vectors of A.
+
+- Moore-Penrose Pseudoinverse (MPP)
+    - Invert non-square matrices.
+        - Used to solve for unknowns in very common ML cases.
+    - Denoted as A(+)
+    - Can be calculated as: A(+) = VD(+)U(T) where
+        - U, D, and V are SVD of A
+        - D(+) = (D with reciprocal of all-non zero elem.)(T)
+
+    - We can now estimate model weights w if n != m: (row/cols)
+        - w = X(+)y
+
+- Trace Operator
+    - Used to re-arrange linear equations.
+    - Denoted as Tr(A) being A a matrix.
+    - Its the sum of the diagonal elements of a matrix.
+
+    - Properties:
+        - Tr(A) = Tr(A(T))
+        - Assumming the matrix shapes line up:
+            - Tr(ABC) = Tr(CAB) = Tr(BCA)
+        - It provides a convenient way to calculate a matrix's
+        Frobenius norm:
+            - ||A||f = Root(Tr(AA(T)))
+
+- Principal Component Analysis (PCA)
+    - ML Techique for working with unlabeled data.
+    - Its Unsupervised: enables identification of structure in
+    unlabeled data.
+    - It enables lossy compression.
+        - First principal component contains most variance
+        (data structure).
+        - Second PC contains next most.
+        - So on...

@@ -1,0 +1,25 @@
+Hadamard product
+    - Element-wise product.
+    - Only if two tensor have the same size.
+    - This is NOT matrix multiplication.
+
+    - Mat notation => A ⊙ X
+
+    - This means that when we do operations between two tensors with the same size, each operation is going to be made between each corresponding elements in the same coordinates.
+        - [[25, 2],    +  [[ 25, 2],  = [[ 50, 4]
+            [5, 26]]       [ 5, 26]]     [ 10, 52]]
+
+- Tensor reduction
+    - By adding, subtracting, multiplicating or dividing all elements of a tensor, or across a specific axis.
+
+- Dot product
+    - Both vectors must have the same length.
+    - This can be denoted by:
+        - x ⋅ y
+        - x^Ty (mul the tranpose of X with y)
+        - (x, y) (curved brackets)
+    - Procedure:
+        - Calculate products in an element-wise fashion.
+        - Sum reductively across the products to get a scalar value.
+    - This is performed at every artificial neuron in a DL network.
+

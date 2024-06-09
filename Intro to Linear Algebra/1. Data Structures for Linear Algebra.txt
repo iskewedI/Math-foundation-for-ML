@@ -1,0 +1,79 @@
+- Algerba = Arithmetic that includes non-numerical entities like "x".
+- If it has an "exponential term" (or root), it isn't lineal algebra.
+
+- Definition
+    - "Solving for unknowns within a system of linear equations"
+
+- Possibilities:
+    - Could be many equations.
+    - Could be many unknowns in each equation.
+
+- Possible results:
+    - One solution
+    - No solution
+    - Infinite solutions
+
+- Applications:
+    - Solving for unknowns in ML algos.
+    - Reducing dimensionality.
+    - Recommenders
+    - NLP (SVD, matrix factorization)
+
+- Tensors:
+    - "ML generalization of vector and matrices to any number of dimensions"
+    - Depending on dimension, we have:
+        - Dim | Name     | Example
+        - 0   | Scalar   | (x)
+        - 1d  | Vector   | ( [x1, x2, x3] )
+        - 2d  | Matrix   | ( [x1, x2
+                              x3, x4] )
+        - 3d  | 3-Tensor |  3D table, like a Cube
+        - nd  | n-Tensor | Higher dimension entity
+
+
+-- Scalars
+    - Denoted in lowercase, italics, e.g. _x_
+    - Should be typed, e.g. int, float32
+
+-- Vectors
+    - Denoted in lowercase, italics, bold, e.g. _*x*_
+        - The elements of the vectors are not scalars, so they are not represented by bold, just italics.
+    - They represent a point in space.
+        - length == 2, represents a point in a 2D matrix.
+        - length == 3, represents a point in a 3D cube.
+
+    - Vector transposition:
+        - Transforms a vector from a row vector to a column vector (or viceversa).
+            - Elements inside remain intact and in order.
+            - e.g. from (1, 3) to (3, 1)
+
+    - Norms:
+        - Functions that quantify the vector magnitude.
+        - The most important one: L² Norm
+            - Measures simple (Euclidean) distance from origin (0, 0)
+            - Could be notated as ||x|| (bold)
+            - Calculated with np using np.linalg.norm(x)
+        - Used in ML for optimization, regularization and distance measurement.
+    - Unit vectors:
+        - Their length is equal to 1.
+            - ||x|| = 1
+    - Orthogonal vectors:
+        - If x(t) * y = 0
+            - If the dot product is 0
+        - They are at 90° to each other
+        - An n-dimensional space has max n mutually orthogonal vectors.
+
+-- Matrices
+    - Two-dimensional array of numbers
+    - Denoted in uppercase, italics, bold, e.g _*X*_
+        - Height given priority ahead of width in notation: (Nrow, Ncol)
+        - Three ros and two columns: (3, 2)
+    - Individual scalar elements are denoted in uppercase, italics only
+        - _X(1,2)_
+    - Colon represents an entire row or column:
+        - Left column of matrix _*X*_ is _*X(:, 1)*_
+        - Right column of matrix _*X*_ is _*X(2, :)*_
+
+- Generic Tensor Notation
+    - Denoted using Upper-case, bold, italics, sans serif, e.g. _*X*_ (sans serif)
+    -

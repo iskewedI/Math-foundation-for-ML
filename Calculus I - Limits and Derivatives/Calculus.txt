@@ -1,0 +1,42 @@
+- Calculus
+    - Mathematical study of continuous change
+    - It has two branches:
+        - Differential calculus
+        - Integral calculus
+
+-- Differential calculus
+    - Study of rates of change.
+    - Used to calculate slopes (derivatives).
+    - Applications: Optimize by finding minima and maxima of curves.
+        - Used in engineering (max strength)
+        - Used in finance (min cost)
+        - Used in ML, including Deep Learning.
+            - Gradient descent to minimize cost.
+            - Gradient ascent to maximize reward.
+        - Higher-order derivatives used in "fancy" optimizers.
+
+- Integral calculus
+    - Study of areas under curves.
+        - Identifying area of a shape
+    - Facilitates the inverse of differential calculus.
+    - Applications:
+        - Receiver operating characteristic
+            - Binary Classification models.
+        - Probability theory's "expectation" of random variable in ML, and DL.
+
+- The Method of Exhaustion
+    - Allow us to identify the area of shapes.
+    - It can find area of curved shapes.
+        - It uses polygons with more and more sides (more curved) until we have
+        infinite sides, in which after calculating the area, we will have the area
+        of the circle.
+    - Calculus in general relies on the idea of approaching infinity.
+        - Leibniz gave this field the name "Calculus of the infinitesimals"
+
+- Limits
+    - Easy to calculate for continuous function.
+    - In some cases, we can solve the limit through algebra
+        - Factoring
+    - Applications
+        - To define derivatives, essential for Gradients.
+        - Gradient Descent and Optimization

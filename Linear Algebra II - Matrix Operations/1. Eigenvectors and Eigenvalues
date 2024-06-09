@@ -1,0 +1,55 @@
+Applications in ML:
+    - Data compression, performing SVD
+        - Selectively decreasing matrix size, retaining most important
+        components.
+    - Moore-Penrose Pseudo Inverse
+        - Tool that enables us to solve for unknown values in linear systems that
+        arent appropiate for ordinary matrix inversion, such as the overdetermined
+        systems of equations typical in ML.
+
+- Affine Transformations
+    - Flipping, rotating, rescaling, shearing matrices.
+    - They are changes in geometry that may adjust distances or angles between vectors,
+    but preserving parallelism between them
+    - We can concatenate several vectors into a matrix, where each column is a separate
+    vector, apply a transformation once and it will be independently applied to each
+    column (vector).
+
+- Eigenvector
+    - A vector is an eigenvector if it maintains its direction after a transformation
+    is applied to the matrix.
+    - The eigenvalue of an eigenvector will tell how much the length of the vector
+    changed after the transformation.
+        - If 1, it didn't change.
+        - If 2, it doubled in size.
+        - If -1, his direction was flipped but not changed in length.
+
+- Matrix Determinants
+    - The have an intimate relationship with eigenvalues.
+    - They map *square* matrix to scalar
+    - Enables us to determine whether matrix can be inverted.
+    - Denoted as det(X) for a matrix X
+
+    - If det(X) = 0: (can't be inverted)
+        - Matrix X(-1) can't be computed
+            - 1/det(X) = 1/0 -> impossible to solve.
+        - Matrix X is singular. It contains linearly-dependent columns.
+
+    - For 2x2 matrices:
+        - Denotation: |x| = ad-bc for a matrix: [a b
+                                                 c d]
+    - For larger matrices:
+        - We use recursion, calculating small matrices determinants to larger ones.
+        - For each scalar in the first matrix row, we multiply it with the determinant
+        of all the matrix created by grouping all other scalars that are not in the
+        selected scalar row nor column, until we get to calculate the determinant of a
+        2x2 matrix, in which case we can solve it with the previously mentioned formula.
+
+- Determinants & Eigenvalues
+    - det(X) = product of all eigenvalues of X
+    - |det(X)| quantifies the volume change as a result of applying X to another tensor:
+        - If det(X) = 0, it collapses spaces completely in at least one dimenstion,
+        thereby eliminating all volume.
+        - If 0 < |det(X)| < 1, it contracts volume to some extent.
+        - If |det(X)| = 1, it preserves volume exactly.
+        - If |det(X)| > 1, it expands volume.
