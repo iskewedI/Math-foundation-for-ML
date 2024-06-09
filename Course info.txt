@@ -1,1 +1,5 @@
-https://udemy.com/course/machine-learning-data-science-foundations-masterclass
+Udemy course:
+    - https://udemy.com/course/machine-learning-data-science-foundations-masterclass
+
+Course code:
+    - https://github.com/jonkrohn/ML-foundations

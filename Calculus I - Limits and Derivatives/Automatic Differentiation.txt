@@ -1,0 +1,34 @@
+- Is a computational technique to scale massively the calculation of derivatives.
+    - A.K.A.
+        - Autodiff
+        - Autograd
+        - Computational diff
+        - Reverse mode diff
+        - Algorithmic diff
+    - Is distinct from classical methods:
+        - Numerical diff (delta method; introduces rounding errors)
+        - Symbolic diff (algebraic rules; computationally inefficient)
+    - Relative to classical methods, it better handles:
+        - Functions with many inputs (like in ML)
+        - Higher-order derivatives
+
+
+    - It works by the application of chain rule (typically partial derivative)
+    to sequence (forward pass) of arithmetic operations.
+        - Whereas chain rule by hand typically begins at most-nested function,
+        autodiff always proceeds from outermost function inward (reverse)
+    - Small constant factor more computational expensive than forward pass (at most)
+
+- The Line Equation as a Tensor Graph
+    - Line equation y= mx + b represented as a directed acyclic graph (DAG)
+        - It doesn't have loops (cycles) and the tensors (arrows) are directed.
+
+- Chain rule in Autodiff
+    - Used to calculate the loss, taking a cost function and two values:
+        - Real
+            - The y in our data
+        - Predicted
+            - Another function we need to calculate.
+            - y_hat = f(x, m, b) (forward pass)
+    - final equation: C = g(f(x, m, b), y)
+        - Here comes the chain rule.

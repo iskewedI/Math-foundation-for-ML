@@ -28,3 +28,20 @@ def plot_vectors(vectors, colors):
         x = np.concatenate([[0,0],vectors[i]])
         plt.quiver([x[0]], [x[1]], [x[2]], [x[3]],
                    angles='xy', scale_units='xy', scale=1, color=colors[i],)
+
+
+# Returns m*x + b
+def regression(my_x, my_m, my_b):
+    return my_m*my_x + my_b
+
+def regression_plot(my_x, my_y, my_m, my_b):
+    fig, ax = plt.subplots()
+
+    ax.scatter(my_x, my_y)
+
+    x_min, x_max = ax.get_xlim()
+    y_min = regression(x_min, my_m, my_b).detach().item()
+    y_max = regression(x_max, my_m, my_b).detach().item()
+
+    ax.set_xlim([x_min, x_max])
+    _ = ax.plot([x_min, x_max], [y_min, y_max])
