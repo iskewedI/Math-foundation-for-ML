@@ -1,0 +1,59 @@
+The Delta Method
+  - To calculate the slope at a particular point of a curve.
+    - It uses the difference between two points to calculate the slope (P and Q)
+  - Denotated by m = Δy / Δx
+    - Which means, the change in y divided by the change in x
+    - Which can be represented as m = y2 - y1 / x2 - x1
+      - That's the differentiation between two points.
+  - The closer Q becomes to P, the closer the slope m comes to being the true tangent of the point P.
+
+- Derivative notations:
+  - Differentiation operator: y = d / dx 
+  - First derivative: 
+    - y (dot above y) -> Newton's notation
+    - y' -> Modern way
+    - f'(x) 
+    - dy/dx -> Leibniz's notation
+  - Second derivative:
+    - y (2 dots above y) -> Newton's notation
+    - y'' -> Modern way
+    - f''(x) 
+    - d(2)y/dx(2) -> x and d squared
+
+- Differentiation rules
+  - Derivative of a constant: d/dx c = 0 assuming c is a constant
+    - A constant has no variation so its slope is nothing.
+  - The Power Rule
+    - d/dx x(n) = nx(n-1)
+      - The derivative of an 'x' to the power of 'n', is equal to 'n' times 'x' powered to the 'n'-1
+      - e.g. d/dx x(4) = 4x(3)
+  - The constant multiple rule
+    - d/dx (cy) = c d(dx) (y) = c dy/dx
+      - e.g. assuming y = x(4) and dy/dx = 4x(3)
+        - d/dx 2y = 2 dy/dx = 2(4x(3)) = 8x(3)
+  - The Sum Rule
+    - d(y+w)/dx = dy/dx + dw/dx
+  - The Product Rule
+    - d(wz)/dx = w dz/dx + z dw/dx
+    - Useful whenever product is incalculable pre-diff
+  - The Quotient (i.e., Fraction) Rule
+    d/dx (w/z) = (z dw/dx - w dz/dx) / z²	
+  - The Chain Rule
+    - Denoted by dy/dx = dy/du * du/dx
+    - Based on nested functions (a.k.a. composite functions)
+      - The chain rule is an easy way to find derivative of nested functions (very common in ML)
+    - Many applications within ML:
+      - Gradient descent in general
+      - Critical for backpropagation algo used to train neural nets
+    - If we have y = (2x²	+8)²	
+      1. We separate it in two different functions:
+        - u = 2x²	+ 8 
+          - du/dx = 4x
+        - y = u²	 
+          - dy/du = 2u
+          -       = 2(2x²	+ 8)
+          -       = 4x²	+ 16
+      2.  Then we apply the chain rule
+        - dy/dx = dy/du * du/dx
+                = (4x² + 16)(4x)
+                = 16x³ + 64x
