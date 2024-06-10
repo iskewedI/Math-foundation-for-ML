@@ -1,0 +1,34 @@
+Partial derivative
+    - Measure how a function changes as its input variables changes.
+    - Represent the rate of change of a function with respect to one of its variables,
+    holding the other variables constant (zero).
+
+    - Applications in ML
+        - Gradient Descent
+            - Partial derivatives help calculate the gradient.
+        - Backpropagation
+            - Partial derivatives are used to compute the gradient of the loss
+            function with respect to each weight. This adjust the weights to minimize
+            the loss.
+        - Regularization
+            - Used in regularization techniques to prevent overfitting by adding
+            penalty term to the loss function.
+        - Feature Selection and Importance
+            - Analyzing partial derivatives can indicate sensitivity of output
+            to different input features.
+
+    - Notations: for fn => z = f(x, y) if we want to derivate in respect witch x
+        - dz/dx
+        - df/dx
+        - fx
+        - Dxf
+
+    - The Chain Rule for Partial Derivatives of multivarial functions:
+        - Lets say => y = f(u) and u = g(x, z) <- notice the multivarial input of g
+            - We need to calculate separately:
+                - dy/dx = dy/du * du/dx
+                - dy/dz = dy/du * du/dz
+        -  Let say => y = f(u, v) and u = g(x, z) and v = h(x, z)
+            - We need to calculate separately for each variable:
+                - dy/dx = dy/du * du/dx + dy/dv * dv/dx <- notice we're ADDING the results
+                - dy/dz = dy/du * du/dz + dy/dv * dv/dz
