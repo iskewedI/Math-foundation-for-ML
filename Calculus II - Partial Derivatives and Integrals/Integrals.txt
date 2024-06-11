@@ -1,0 +1,49 @@
+- The Receiver-Operating Characteristic (ROC) Curve
+    - Quantifies the performance of a Binary Classifier Model.
+    - The objectives is to have an algorithm that fills as much of the space
+    under the ROC Curve as possible.
+
+- Integral Calculus
+    - Is the study of areas under curves.
+    - It facilitates the inverse of differential calculus.
+        - It also finds areas more generally, volumes and central points.
+        - Is kinda the opposite of differentiation (see the power rule)
+    - We use Slices that corresponds with rectangular areas underneath a curve,
+    adding their widths, to estimate the area under the curve.
+    - Notation:  ∫2x dx
+        - Integral symbol (indefinite): ∫
+        - Function to integrate: 2x
+        - Variable to integrate along: dx
+
+    - 3 more important rules
+        - Power Rule
+            -  ∫x^n dx = x^n+1/n+1 + C  <- Constant that may habe been lost by
+                                            differentiation.
+            - n can't be -1 (it will result in a division by zero error)
+        - The Constant Multiple Rule
+            -  ∫c f(x) dx = c  ∫f(x) dx + C
+                - If we have a constant inside the integral, we can ignore it and
+                use it later on (add it outside the integral)
+        - The Sum Rule
+            -  ∫(f(x)+g(x)) =  ∫f(x)dx +  ∫g(x)dx + C
+            - If we are adding together functions inside a integral, we can
+            calculate the integral of each one and then add them.
+
+
+- Definite Integrals
+    - Instead of being interested of the entire area under the curve (indefinite),
+    we are interested of a particula range (definite range).
+
+    - Notation:     x2
+                - ∫   f(x)dx
+                    x1
+        - where x1 is the start of the range and x2 the end of it.
+
+    - Process
+        - First, we need to calculate the DEFINITE integral of the equation.
+        - Then, we substitute x1 for x in the resulting equation.
+            - At x = x1, ...
+        - Then, we substitute x2 for x in the resulting equation.
+            - At x = x2, ...
+        - Finally, we subtract the smaller area from the larger one, leaving us with
+        the definite area of under the curve.
