@@ -1,0 +1,16 @@
+- Quantifying Uncertainty and Building A.I Systems that works well despite it.
+
+- Probability Theory
+    - Mathematical study of procesesses that include uncertainty.
+    - Probabilities expressed over range of 0 (will not happen) to 1 (will happen)
+    - Enables models of future non-deterministics events based on historical data.
+        - Statistics
+            - Quantifies confidence in inferences based on probabilistic events.
+            - Provides framework for supporting or rejecting hypotheses.
+        - Machine learning
+            - Modeling approach that scales to large, high-dimensional data.
+    - Key concepts
+        - Law of large numbers
+        - Random variables
+        - Probability distributions
+        - Central limit theorem
