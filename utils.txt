@@ -2,7 +2,7 @@ Keyboard useful shortcuts:
     ¹: Alt+0185
     ²: Alt+0178
     ³: Alt+0179
-
+    ^: Alt+94
 
 Meanings:
     - w.r.t.: "With respect to"

@@ -45,3 +45,28 @@ def regression_plot(my_x, my_y, my_m, my_b):
 
     ax.set_xlim([x_min, x_max])
     _ = ax.plot([x_min, x_max], [y_min, y_max])
+
+
+def labeled_regression_plot(my_x, my_y, my_m, my_b, my_C, include_grad=True):
+    title = 'Cost = {}'.format('%.3g' % my_C.item())
+    if include_grad:
+        xlabel = 'm = {}, m grad = {}'.format('%.3g' % my_m.item(), '%.3g' % my_m.grad.item())
+        ylabel = 'b = {}, b grad = {}'.format('%.3g' % my_b.item(), '%.3g' % my_b.grad.item())
+    else:
+        xlabel = 'm = {}'.format('%.3g' % my_m.item())
+        ylabel = 'b = {}'.format('%.3g' % my_b.item())
+
+    fig, ax = plt.subplots()
+
+    plt.title(title)
+    plt.ylabel(ylabel)
+    plt.xlabel(xlabel)
+
+    ax.scatter(my_x, my_y, zorder=3)
+
+    x_min, x_max = ax.get_xlim()
+    y_min = regression(x_min, my_m, my_b).detach().item()
+    y_max = regression(x_max, my_m, my_b).detach().item()
+
+    ax.set_xlim([x_min, x_max])
+    _ = ax.plot([x_min, x_max], [y_min, y_max], c='C01')

@@ -32,3 +32,9 @@ Partial derivative
             - We need to calculate separately for each variable:
                 - dy/dx = dy/du * du/dx + dy/dv * dv/dx <- notice we're ADDING the results
                 - dy/dz = dy/du * du/dz + dy/dv * dv/dz
+
+- Backpropagation
+    - Context: Chain rule of partial derivatives of cost w.r.t. model parameters extends
+    to Deep Neural Networks, which may have 1000s of layers.
+    - Is the automatif differentiation, the calculation of cost C w.r.t. of all
+    model parameters.

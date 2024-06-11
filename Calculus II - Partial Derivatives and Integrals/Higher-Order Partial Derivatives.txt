@@ -1,0 +1,17 @@
+- Also called Second-Order Derivatives.
+- They are used to accelerate through gradient descent, is an Optimization technique.
+
+- Notated by adding a power of 2 to the Delta:
+    - First derivative: dz/dx
+    - Second derivative: d²z/dx²
+- Therea re two types
+    - Unmixed Partial Derivatives
+        - We differentiate from the same variables we did the first derivative.
+        - We differentiate the result of the first derivative.
+    - Mixed Partial Derivatives
+        - We mix which variables we differentiate with respect to.
+        - e.g. taking into account that dz/dy = 5x + 4y and dz/dx = 2x + 5y
+            - d²z/dxdy = d/dx (dz/dy) = d/dx(5x + 4y) = 5(1) + 0 = 5
+            - d²z/dydx = d/dy (dz/dx) = d/dy (2x + 5y) = 0 + 5(1) = 5
+        - On certain common conditions, the mixed SOD are equal to each other
+            - Like the previous example.
